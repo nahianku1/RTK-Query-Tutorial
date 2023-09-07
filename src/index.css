@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+  padding: 8px;
+  background-color: antiquewhite;
+}
+
+table{
+  width: 100%;
+
+}
+
+thead{
+  background-color: rgb(90, 240, 90);
+  color: aliceblue;
+  
+}
+
+td,th{
+  border-collapse: collapse;
+  border: 1px solid lightgreen;
+  padding: 8px;
+  text-align: center;
+}
