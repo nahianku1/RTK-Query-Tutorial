@@ -3,6 +3,7 @@ import { FaPen, FaTrash } from "react-icons/fa6";
 import Modal from "./Modal";
 import UpdateModal from "./UpdateModal";
 import { useDeleteUsersMutation, useGetUsersQuery } from "./endpoints";
+import Loader from "./Loader";
 
 function RTKQuery() {
   let [showCreateModal, setShowCreateModal] = useState(false);
@@ -16,7 +17,7 @@ function RTKQuery() {
   console.log(deletedata);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <Loader />;
   }
   if (isError) {
     return <h1>{error.error}</h1>;
@@ -46,7 +47,7 @@ function RTKQuery() {
       >
         Create New
       </button>
-     
+
       <table>
         <thead>
           <tr>
